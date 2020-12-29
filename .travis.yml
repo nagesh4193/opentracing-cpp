@@ -38,7 +38,8 @@ matrix:
     env:
     - MATRIX_EVAL="CC=gcc-4.8 && CXX=g++-4.8"
  #Adding power support architecture
- - os: linux
+ - arch: ppc64le
+   os: linux
     addons:
       apt:
         sources:
@@ -46,7 +47,6 @@ matrix:
         packages:
         - g++-6
         - cmake
-    arch: ppc64le
     env:
     - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
 
